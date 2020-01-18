@@ -25,10 +25,6 @@ class FilesSorter {
             moveFile(file.getAbsolutePath(),directoryForSpecificFiles.getAbsolutePath() + "\\" + filename);
             return;
         }
-        if (file.getName().endsWith("files") && Character.isUpperCase(file.getName().charAt(0))
-                                          && Character.isUpperCase(file.getName().charAt(file.getName().length()-6))) {
-            return;
-        }
         File[] files = file.listFiles();
 
             for (int i = 0; i < files.length; i++) {
